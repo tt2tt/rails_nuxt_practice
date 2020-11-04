@@ -7,12 +7,11 @@ RUN mkdir /app
 WORKDIR /app
 
 ADD Gemfile /app/Gemfile
+RUN gem install bundler
 
 RUN apt-get update -qq && \
   apt-get install -y build-essential \
-  libpq-dev \
-  sudo \
-  gem install bundler:2.0.1
+  libpq-dev 
 
 RUN bundle install
 
