@@ -1,0 +1,11 @@
+redirect
+ユーザーのアクションに応じたリダイレクト先のURL設定。
+
+login:未ログイン時にリダイレクトされる先のURL
+logout:ログアウトした後にリダイレクトされる先のURL
+callback:コールバック用のURL。Oauth認証（SNS認証）等に使われる。
+home:ログイン後にリダイレクトされる先のURL
+strategies
+Auth Moduleの認証ロジックの設定です。JWTとCookieを使うlocalと、OAuthを使うsocialの２種類の設定ができます。今回はOauth認証は使わないので、socialは記載していません。
+
+endpoint:どのメソッドが呼ばれた際に、APIのどのエンドポイントに飛ばすかを設定します。例えば、loginメソッドが呼び出されたら、APIにpost: /api/auth/loginにHTTPリクエストを送信します。
